@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh HTML</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Selamat Datang di Kalkulator pintar</h1>
+        
+        <div>
+            <input type="number" id="angka1" placeholder="Masukkan angka pertama">
+            <input type="number" id="angka2" placeholder="Masukkan angka kedua">
+        </div>
+        
+        <div>
+            <button id="tambah">+</button>
+            <button id="kurang">-</button>
+            <button id="kali">*</button>
+            <button id="bagi">/</button>
+        </div>
+        
+        <h2>Hasil: <span id="hasil">0</span></h2>
+    </div>
+
+    <script>
+        document.getElementById('tambah').addEventListener('click', () => {
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            const hasil = angka1 + angka2;
+            document.getElementById('hasil').innerText = hasil;
+        });
+
+        document.getElementById('kurang').addEventListener('click', () => {
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            const hasil = angka1 - angka2;
+            document.getElementById('hasil').innerText = hasil;
+        });
+
+        document.getElementById('kali').addEventListener('click', () => {
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            const hasil = angka1 * angka2;
+            document.getElementById('hasil').innerText = hasil;
+        });
+
+        document.getElementById('bagi').addEventListener('click', () => {
+            const angka1 = parseFloat(document.getElementById('angka1').value);
+            const angka2 = parseFloat(document.getElementById('angka2').value);
+            const hasil = angka1 / angka2;
+            document.getElementById('hasil').innerText = hasil;
+        });
+    </script>
+</body>
+</html>
